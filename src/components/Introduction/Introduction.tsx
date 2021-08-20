@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "../../../public/logo.png";
 import { PersonalData } from "../../data";
+import { SocialAnchor } from "../SocialAnchor";
 import { CurrentJob } from "./CurrentJob";
 import {
   IntroductionWrapper,
@@ -17,6 +18,7 @@ export const Introduction: React.FC<IIntroductionProps> = ({
 }: IIntroductionProps) => {
   const {
     dates: { developingSince, frontendSince },
+    contacts: { email, linkedin, github },
     employees,
   } = personalData;
 
@@ -30,6 +32,26 @@ export const Introduction: React.FC<IIntroductionProps> = ({
         Focusing in front-end since {frontendSince}.
         <CurrentJob employees={employees} />
       </IntroductionSubtitle>
+      <section>
+        <SocialAnchor
+          url={`mailto:${email}`}
+          name="Email"
+          color="#000"
+          bgColor="#EFEFEF"
+        ></SocialAnchor>
+        <SocialAnchor
+          url={linkedin}
+          name="LinkedIn"
+          color="#FFF"
+          bgColor="#006397"
+        ></SocialAnchor>
+        <SocialAnchor
+          url={github}
+          name="Github"
+          color="#FFF"
+          bgColor="#000"
+        ></SocialAnchor>
+      </section>
     </IntroductionWrapper>
   );
 };

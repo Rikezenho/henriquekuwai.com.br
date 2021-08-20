@@ -16,7 +16,7 @@ const IntroductionSubtitle = styled.h2`
   margin-top: 0;
   font-weight: 300;
   font-size: 2.5rem;
-  padding-bottom: 15px;
+  padding-bottom: 0px;
   line-height: 1.4;
 `;
 

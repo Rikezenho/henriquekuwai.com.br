@@ -6,7 +6,7 @@ import "../styles/base.css";
 
 const theme = {
   colors: {
-    primary: "#0070f3",
+    primary: "#A5E22E",
     text: {
       primary: "#444",
     },

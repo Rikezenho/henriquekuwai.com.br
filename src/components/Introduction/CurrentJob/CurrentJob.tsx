@@ -1,4 +1,5 @@
 import { Employee } from "../../../data";
+import { Highlight } from "./styles";
 
 interface ICurrentJobProps {
   employees: Array<Employee>;
@@ -12,12 +13,12 @@ const CurrentJob: React.FC<ICurrentJobProps> = ({
   return provider ? (
     <>
       <br />
-      Currently employed at <span className="highlight">{provider}</span>.
+      Currently employed at <Highlight>{provider}</Highlight>.
     </>
   ) : (
     <>
       <br />
-      Currently <span className="highlight">available for jobs</span>.
+      Currently <Highlight>available for jobs</Highlight>.
     </>
   );
 };
