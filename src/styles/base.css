@@ -1,28 +1,6 @@
 /* reset */
-html,
-body,
-#__next {
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 /* font sizing */
-body {
-  color: #333;
-  font-size: 100%;
-  font-family: Helvetica, sans-serif;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
 
 h1,
 h2,
