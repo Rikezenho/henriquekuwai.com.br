@@ -30,7 +30,6 @@ const Home: React.FC<IHomeProps> = ({ posts, personalData }: IHomeProps) => {
       <div className="content">
         <Head>
           <title>Henrique Kuwai</title>
-          <link rel="icon" href="/favicon.ico" />
         </Head>
 
         <Introduction personalData={personalData} />

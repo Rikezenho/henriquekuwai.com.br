@@ -60,6 +60,7 @@ const App: React.FC = ({ Component, pageProps }: any) => {
             }}
           ></script>
         )}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
