@@ -11,6 +11,7 @@ const StyledSocialAnchor = styled.a`
   text-transform: uppercase;
   font-size: 0.8rem;
   margin-right: 10px;
+  ${(props) => props.styleProps}
 
   &:hover,
   &:focus {

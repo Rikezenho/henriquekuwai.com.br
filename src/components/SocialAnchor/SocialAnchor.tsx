@@ -2,9 +2,11 @@ import { StyledSocialAnchor } from "./styles";
 
 interface ISocialAnchorProps {
   name: string;
-  url: string;
   color: string;
   bgColor: string;
+  url?: string;
+  target?: string;
+  styleProps?: object;
 }
 
 const SocialAnchor: React.FC<ISocialAnchorProps> = ({
@@ -12,13 +14,16 @@ const SocialAnchor: React.FC<ISocialAnchorProps> = ({
   url,
   color,
   bgColor,
+  target = "_blank",
+  ...styleProps
 }: ISocialAnchorProps) => {
   return (
     <StyledSocialAnchor
       color={color}
       bgColor={bgColor}
-      href={url}
-      target="_blank"
+      {...(url ? { href: url } : {})}
+      {...(target ? { target } : {})}
+      {...styleProps}
     >
       {name}
     </StyledSocialAnchor>
