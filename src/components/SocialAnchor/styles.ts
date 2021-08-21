@@ -15,7 +15,7 @@ const StyledSocialAnchor = styled.a`
   &:hover,
   &:focus {
     color: ${(props) => props.color};
-    transform: translateY(-5px);
+    transform: translateY(-2px);
   }
 
   &:visited {
