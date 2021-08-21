@@ -4,6 +4,7 @@ import { CvAbout } from "../components/CvAbout";
 import { CvCourse } from "../components/CvCourse";
 import { CvHeader } from "../components/CvHeader";
 import { CvJob } from "../components/CvJob";
+import { CvWrapper } from "../components/CvWrapper";
 import { Complementary, Employee, PersonalData } from "../data";
 
 export const getStaticProps = async () => {
@@ -45,14 +46,14 @@ const Curriculum: React.FC<ICurriculumProps> = ({
       <Head>
         <title>Henrique Kuwai - Curriculum</title>
       </Head>
-      <div className="cv">
+      <CvWrapper className="cv">
         <header>
           <div className="content">
             <CvHeader {...personal} />
           </div>
           <CvAbout {...contacts} />
         </header>
-        <div className="conteudo">
+        <main className="conteudo">
           <div className="content">
             {description || languages.length ? (
               <div className="bio-wrapper">
@@ -70,19 +71,20 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                         {languages.map((language: string, index: number) => (
                           <span key={`language-${index}`}>
                             {language}
-                            {index !== language.length - 1 ? " ," : null}
+                            {index !== language.length - 1 ? ", " : null}
                           </span>
                         ))}
                       </div>
                     ) : null}
+
+                    {school ? (
+                      <div className="item">
+                        <strong>Formação acadêmica:</strong>
+                        <br />
+                        <CvCourse {...school} />
+                      </div>
+                    ) : null}
                   </div>
-                  {school ? (
-                    <div className="item">
-                      <strong>Formação acadêmica:</strong>
-                      <br />
-                      <CvCourse {...school} />
-                    </div>
-                  ) : null}
                 </div>
               </div>
             ) : null}
@@ -123,7 +125,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                     <ul className="ul-nodelists">
                       {items.map((item: string, index: number) => (
                         <li key={`node-${index}`} className="item">
-                          {item}
+                          <div className="box">{item}</div>
                         </li>
                       ))}
                     </ul>
@@ -131,13 +133,12 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                 ))
               : null}
           </div>
-        </div>
+        </main>
         <footer className="footer">
           <div className="content">
             {contacts.linkedin ? (
               <div className="additional-info linkedIn-info">
-                <AiFillLinkedin />
-                Veja mais no meu LinkedIn:
+                <AiFillLinkedin /> Veja mais no meu LinkedIn:{" "}
                 <a href={contacts.linkedin} target="_blank">
                   {contacts.linkedin}
                 </a>
@@ -145,8 +146,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
             ) : null}
             {repositoryUrl ? (
               <div className="additional-info github-info">
-                <AiFillGithub />
-                Código-fonte do currículo:
+                <AiFillGithub /> Código-fonte do currículo:{" "}
                 <a href={repositoryUrl} target="_blank">
                   {repositoryUrl}
                 </a>
@@ -156,7 +156,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
             Última atualização em {lastUpdate}.
           </div>
         </footer>
-      </div>
+      </CvWrapper>
     </>
   );
 };

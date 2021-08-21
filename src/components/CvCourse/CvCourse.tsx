@@ -1,10 +1,11 @@
 import { School } from "../../data";
+import { CourseWrapper } from "./styles";
 
 const CvCourse: React.FC<School> = (props: School) => {
   const { logo, course, institute, date } = props;
 
   return (
-    <div className="course-item">
+    <CourseWrapper className="course-item">
       <div className="logo">
         <img src={`/img/cv/${logo}`} />
       </div>
@@ -13,7 +14,7 @@ const CvCourse: React.FC<School> = (props: School) => {
         <div className="subtitle">{institute}</div>
         <div className="date">{date}</div>
       </div>
-    </div>
+    </CourseWrapper>
   );
 };
 

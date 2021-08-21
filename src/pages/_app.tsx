@@ -22,10 +22,15 @@ const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
+  *,
+  *:before,
+  *:after {
     box-sizing: border-box;
+    margin: 0;
+  }
+
+  body {
+    padding: 0;
     font-family: 'Fira Sans', Helvetica, sans-serif;
     line-height: 1.4;
     font-size: 1rem;

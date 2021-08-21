@@ -6,12 +6,13 @@ import {
   AiOutlineEnvironment,
   AiOutlineGithub,
 } from "react-icons/ai";
+import { About } from "./styles";
 
 const CvAbout: React.FC<Contacts> = (props: Contacts) => {
   const { phone, email, web, github, address } = props;
 
   return (
-    <div className="about">
+    <About className="about">
       <div className="content">
         <div className="block">
           {phone ? (
@@ -49,7 +50,7 @@ const CvAbout: React.FC<Contacts> = (props: Contacts) => {
           </div>
         ) : null}
       </div>
-    </div>
+    </About>
   );
 };
 
