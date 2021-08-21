@@ -4,7 +4,7 @@ import { CvAbout } from "../components/CvAbout";
 import { CvCourse } from "../components/CvCourse";
 import { CvHeader } from "../components/CvHeader";
 import { CvJob } from "../components/CvJob";
-import { PersonalData } from "../data";
+import { Complementary, Employee, PersonalData } from "../data";
 
 export const getStaticProps = async () => {
   const { personalData } = await import("../data");
@@ -67,7 +67,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                       <div className="item">
                         <strong>Idiomas:</strong>
                         <br />
-                        {languages.map((language, index) => (
+                        {languages.map((language: string, index: number) => (
                           <span key={`language-${index}`}>
                             {language}
                             {index !== language.length - 1 ? " ," : null}
@@ -91,7 +91,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
               <div className="history-wrapper has-hr">
                 <h2>Experiência profissional</h2>
                 <ul className="ul-history">
-                  {employees.map((employee, index) => (
+                  {employees.map((employee: Employee, index: number) => (
                     <li key={`history-${index}`} className="item">
                       <CvJob {...employee} />
                     </li>
@@ -104,7 +104,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
               <div className="complementary-wrapper has-hr avoid-page-break">
                 <h2>Cursos complementares</h2>
                 <ul className="ul-complementary-courses">
-                  {complementary.map((course, index) => (
+                  {complementary.map((course: Complementary, index: number) => (
                     <li key={`course-${index}`} className="item">
                       <CvCourse {...course} />
                     </li>
@@ -115,10 +115,13 @@ const Curriculum: React.FC<ICurriculumProps> = ({
 
             {Object.keys(nodeLists).length
               ? Object.entries(nodeLists).map(([key, { title, items }]) => (
-                  <div className={`${key}-wrapper has-hr avoid-page-break`}>
+                  <div
+                    key={key}
+                    className={`${key}-wrapper has-hr avoid-page-break`}
+                  >
                     <h2>{title}</h2>
                     <ul className="ul-nodelists">
-                      {items.map((item, index) => (
+                      {items.map((item: string, index: number) => (
                         <li key={`node-${index}`} className="item">
                           {item}
                         </li>
