@@ -1,6 +1,6 @@
 export namespace globals {
   export const yourName = "Henrique Kuwai";
-  export const siteName = "Portfolio";
+  export const siteName = "Henrique Kuwai Portfolio";
   export const siteDescription = `A front-end specialist and JavaScript lover from São Paulo, Brazil.`;
   export const siteCreationDate = "August 19, 2021 04:00:00 GMT";
   export const twitterHandle = "@rikezenho";
