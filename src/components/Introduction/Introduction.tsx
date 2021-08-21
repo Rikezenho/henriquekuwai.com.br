@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AiTwotoneMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { RiFilePaper2Fill } from "react-icons/ri";
 import logo from "../../../public/logo.png";
 import { PersonalData } from "../../data";
 import { SocialAnchor } from "../SocialAnchor";
@@ -38,32 +40,25 @@ export const Introduction: React.FC<IIntroductionProps> = ({
           <CurrentJob employees={employees} />
         </IntroductionSubtitle>
         <section>
-          <SocialAnchor
-            url={`mailto:${email}`}
-            name="Email"
-            color="#000"
-            bgColor="#EFEFEF"
-          ></SocialAnchor>
+          <SocialAnchor url={`mailto:${email}`} color="#000" bgColor="#EFEFEF">
+            <AiTwotoneMail /> Email
+          </SocialAnchor>
           <Link href="/cv" passHref>
             <SocialAnchor
-              name="Curriculum"
               color="#000"
               bgColor="#EFEFEF"
               target=""
-            ></SocialAnchor>
+              title="Curriculum"
+            >
+              <RiFilePaper2Fill /> CV
+            </SocialAnchor>
           </Link>
-          <SocialAnchor
-            url={linkedin}
-            name="LinkedIn"
-            color="#FFF"
-            bgColor="#006397"
-          ></SocialAnchor>
-          <SocialAnchor
-            url={github}
-            name="Github"
-            color="#FFF"
-            bgColor="#000"
-          ></SocialAnchor>
+          <SocialAnchor url={linkedin} color="#FFF" bgColor="#006397">
+            <AiFillLinkedin /> LinkedIn
+          </SocialAnchor>
+          <SocialAnchor url={github} color="#FFF" bgColor="#000">
+            <AiFillGithub /> Github
+          </SocialAnchor>
         </section>
       </main>
     </IntroductionWrapper>
