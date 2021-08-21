@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../../public/logo.png";
 import { PersonalData } from "../../data";
 import { SocialAnchor } from "../SocialAnchor";
@@ -42,6 +43,14 @@ export const Introduction: React.FC<IIntroductionProps> = ({
           color="#000"
           bgColor="#EFEFEF"
         ></SocialAnchor>
+        <Link href="/cv" passHref>
+          <SocialAnchor
+            name="Curriculum"
+            color="#000"
+            bgColor="#EFEFEF"
+            target=""
+          ></SocialAnchor>
+        </Link>
         <SocialAnchor
           url={linkedin}
           name="LinkedIn"
