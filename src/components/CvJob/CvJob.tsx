@@ -1,5 +1,5 @@
 import { Employee } from "../../data";
-import { AiOutlineTrophy } from "react-icons/ai";
+import { AiFillTrophy } from "react-icons/ai";
 
 const CvJob: React.FC<Employee> = (props: Employee) => {
   const { date, position, provider, description, awards } = props;
@@ -16,7 +16,7 @@ const CvJob: React.FC<Employee> = (props: Employee) => {
         <div className="awards">
           {awards.map((title, key) => (
             <div key={key} className="award-item">
-              <AiOutlineTrophy /> <span className="info">{title}</span>
+              <AiFillTrophy /> <span className="info">{title}</span>
             </div>
           ))}
         </div>
