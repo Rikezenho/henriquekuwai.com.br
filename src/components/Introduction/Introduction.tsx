@@ -30,7 +30,7 @@ export const Introduction: React.FC<IIntroductionProps> = ({
       <IntroductionSubtitle>
         JavaScript &amp; CSS lover.
         <br />
-        Developer since {developingSince}.
+        Developing things since {developingSince}.
         <br />
         Focusing in front-end since {frontendSince}.
         <CurrentJob employees={employees} />
