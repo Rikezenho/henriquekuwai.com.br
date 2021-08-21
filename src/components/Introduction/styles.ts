@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 const IntroductionWrapper = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
   padding: 0 10%;
 `;
 

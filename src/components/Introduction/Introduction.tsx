@@ -25,45 +25,47 @@ export const Introduction: React.FC<IIntroductionProps> = ({
 
   return (
     <IntroductionWrapper>
-      <IntroductionTitle>
-        <Image src={logo} /> <span className="text">Henrique Kuwai</span>
-      </IntroductionTitle>
-      <IntroductionSubtitle>
-        JavaScript &amp; CSS lover.
-        <br />
-        Developing things since {developingSince}.
-        <br />
-        Focusing in front-end since {frontendSince}.
-        <CurrentJob employees={employees} />
-      </IntroductionSubtitle>
-      <section>
-        <SocialAnchor
-          url={`mailto:${email}`}
-          name="Email"
-          color="#000"
-          bgColor="#EFEFEF"
-        ></SocialAnchor>
-        <Link href="/cv" passHref>
+      <main>
+        <IntroductionTitle>
+          <Image src={logo} /> <span className="text">Henrique Kuwai</span>
+        </IntroductionTitle>
+        <IntroductionSubtitle>
+          JavaScript &amp; CSS lover.
+          <br />
+          Developing things since {developingSince}.
+          <br />
+          Focusing in front-end since {frontendSince}.
+          <CurrentJob employees={employees} />
+        </IntroductionSubtitle>
+        <section>
           <SocialAnchor
-            name="Curriculum"
+            url={`mailto:${email}`}
+            name="Email"
             color="#000"
             bgColor="#EFEFEF"
-            target=""
           ></SocialAnchor>
-        </Link>
-        <SocialAnchor
-          url={linkedin}
-          name="LinkedIn"
-          color="#FFF"
-          bgColor="#006397"
-        ></SocialAnchor>
-        <SocialAnchor
-          url={github}
-          name="Github"
-          color="#FFF"
-          bgColor="#000"
-        ></SocialAnchor>
-      </section>
+          <Link href="/cv" passHref>
+            <SocialAnchor
+              name="Curriculum"
+              color="#000"
+              bgColor="#EFEFEF"
+              target=""
+            ></SocialAnchor>
+          </Link>
+          <SocialAnchor
+            url={linkedin}
+            name="LinkedIn"
+            color="#FFF"
+            bgColor="#006397"
+          ></SocialAnchor>
+          <SocialAnchor
+            url={github}
+            name="Github"
+            color="#FFF"
+            bgColor="#000"
+          ></SocialAnchor>
+        </section>
+      </main>
     </IntroductionWrapper>
   );
 };

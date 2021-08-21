@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { globals } from "../globals";
-import "../styles/base.css";
 
 const theme = {
   colors: {
