@@ -1,7 +1,7 @@
-import React from 'react';
-import { format } from 'fecha';
-import { PostData } from '../loader';
-import { Tag } from './Tag';
+import React from "react";
+import { format } from "fecha";
+import { PostData } from "../../loader";
+import { Tag } from "./../Tag";
 
 export const PostCard: React.FC<{ post: PostData }> = (props) => {
   const post = props.post;
@@ -19,8 +19,8 @@ export const PostCard: React.FC<{ post: PostData }> = (props) => {
           {false && post.subtitle && <p>{post.subtitle}</p>}
           <p>
             {props.post.datePublished
-              ? format(new Date(props.post.datePublished), 'MMMM Do, YYYY')
-              : ''}
+              ? format(new Date(props.post.datePublished), "MMMM Do, YYYY")
+              : ""}
           </p>
           <div className="flex-spacer"> </div>
           {false && (
