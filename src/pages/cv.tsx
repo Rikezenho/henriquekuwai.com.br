@@ -76,11 +76,11 @@ const Curriculum: React.FC<ICurriculumProps> = ({
               </section>
             ) : null}
 
-            {Object.keys(nodeLists).length
-              ? Object.entries(nodeLists).map(([key, { title, items }]) => (
+            {nodeLists.length
+              ? nodeLists.map(({ title, items }, index) => (
                   <section
-                    key={key}
-                    className={`${key}-wrapper has-hr avoid-page-break`}
+                    key={`nodeList-${index}`}
+                    className="has-hr avoid-page-break"
                   >
                     <h2>{title}</h2>
                     <ul className="ul-nodelists">

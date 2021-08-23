@@ -8,7 +8,7 @@ export interface PersonalData {
   personal: Personal;
   employees: Employee[];
   complementary: Course[];
-  nodeLists: NodeLists;
+  nodeLists: NodeList[];
 }
 
 export interface Dates {
@@ -52,23 +52,7 @@ export interface Course {
   date: string;
 }
 
-export interface NodeLists {
-  experience: Experience;
-  stillLearning: StillLearning;
-  softwares: Softwares;
-}
-
-export interface Experience {
-  title: string;
-  items: string[];
-}
-
-export interface StillLearning {
-  title: string;
-  items: string[];
-}
-
-export interface Softwares {
+export interface NodeList {
   title: string;
   items: string[];
 }
@@ -213,8 +197,8 @@ const personalData: PersonalData = {
       date: "Dez/2017",
     },
   ],
-  nodeLists: {
-    experience: {
+  nodeLists: [
+    {
       title: "Tenho experiência ou já trabalhei com...",
       items: [
         "HTML",
@@ -260,7 +244,7 @@ const personalData: PersonalData = {
         "GTM",
       ],
     },
-    stillLearning: {
+    {
       title: "Aprendendo...",
       items: [
         "GraphQL",
@@ -273,7 +257,7 @@ const personalData: PersonalData = {
         "RabbitMQ",
       ],
     },
-    softwares: {
+    {
       title: "Softwares com aptidão",
       items: [
         "SO Windows",
@@ -284,7 +268,7 @@ const personalData: PersonalData = {
         "Google Docs/Sheets/Presentations",
       ],
     },
-  },
+  ],
 };
 
 export { personalData };
