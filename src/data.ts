@@ -41,9 +41,13 @@ export interface Personal {
 }
 
 export interface Employee {
-  position: string;
   provider: string;
   location: string;
+  positions: Array<EmployeePosition>;
+}
+
+export interface EmployeePosition {
+  position: string;
   description: string;
   date: string;
   awards?: string[];
@@ -78,17 +82,17 @@ export interface Softwares {
 }
 
 const personalData: PersonalData = {
-  lastUpdate: "29 de Março de 2021",
+  lastUpdate: "22 de Agosto de 2021",
   description:
-    "Desenvolvedor desde 2008, trabalhando especificamente com plataformas próprias de e-commerce desde 2016, e 100% focado em B2B desde 2018. Apesar da paixão por front-end, já atuei com todas as frentes de desenvolvimento. Executei trabalhos dentro de empresas como a Infracommerce e Netshoes, e cuidei de projetos de clientes de grande porte, como Unilever, Mondelez, Ray-Ban, 3M, Montblanc, Globo, Havaianas, Três Corações, Thomson Reuters, Revista dos Tribunais, Instituto GPA, entre outros.",
+    "Desenvolvedor desde 2008, trabalhei no mercado de e-commerce de 2016 a 2021, e no momento atuo no mercado de financiamentos. Apesar da afinidade com front-end, já atuei com todas as partes de desenvolvimento, back-end a banco de dados. Executei trabalhos dentro de empresas como Creditas, Infracommerce e Netshoes, e atuei em projetos de clientes como Unilever, Mondelez, Ray-Ban, 3M, Montblanc, Globo, Havaianas, Três Corações, Thomson Reuters, Revista dos Tribunais, Instituto GPA, entre outros.",
   languages: [
-    "Português nativo/fluente",
+    "Português nativo",
     "Inglês intermediário/técnico",
     "Espanhol básico",
   ],
   school: {
     institute: "Universidade Presbiteriana Mackenzie",
-    course: "Publicidade e Propaganda (Criação)",
+    course: "Bacharelado em Publicidade e Propaganda",
     date: "Jan/2012 - Dez/2015",
     logo: "mackenzie.png",
   },
@@ -113,61 +117,77 @@ const personalData: PersonalData = {
   },
   employees: [
     {
-      position: "Specialist Engineer - Front-end",
       provider: "Creditas",
       location: "Berrini, São Paulo",
-      description:
-        "Contribuo com 2 squads como especialista, focando principalmente na evolução do front-end React de um app de financiamento automotivo, mas também atuando em demandas de outras tecnologias.",
-      date: "Abr/21 - Current",
+      positions: [
+        {
+          position: "Specialist Engineer",
+          description:
+            "Lidero a evolução de um app focado em financiamento automotivo B2B, principalmente na parte de front-end, mas também atuo em demandas com outras tecnologias - tanto na parte mais voltada ao cliente externo, quanto para o cliente interno.",
+          date: "Abr/21 - Atual",
+        },
+      ],
     },
     {
-      position: "Arquiteto de software",
       provider: "Infracommerce",
       location: "Vila Olímpia, São Paulo",
-      description:
-        "Orientei times e desenvolvedores, tentando exercitar o cuidado em cada etapa da implantação de uma feature ou projeto, sempre tentando fomentar o debate para a definição das soluções técnicas mais adequadas. Realizei pesquisas de soluções e bibliotecas dependendo da necessidade, bem como a criação de POCs para aprovar ideias, além de reforçar boas práticas de código e fluxos de trabalho, tentando disseminar o que pude de conhecimento, tanto em hard quanto soft skills. Tenho grande preocupação com o developer experience, e portanto, criei muitas documentações e ferramentas pensando nesse fim.",
-      date: "Nov/20 - Mar/21",
+      positions: [
+        {
+          position: "Arquiteto de software",
+          description:
+            "Orientei times e desenvolvedores, reforçando sempre o cuidado em cada etapa da implantação de uma feature, fomentando os debates para definir as soluções técnicas. Pesquisei soluções e criei POCs para provar ideias, e também reforcei boas práticas de código e fluxos de trabalho, disseminando ao máximo o conhecimento em forma de documentações e treinamentos.",
+          date: "Nov/20 - Mar/21",
+        },
+        {
+          position: "Líder técnico",
+          description:
+            "Fui um dos pilares na construção de uma nova plataforma de e-commerce B2B, arquitetando todo o front-end. Atuei orientando times multidisciplinares, garantindo qualidade de código nas equipes. Ajudei a definir processos internos, criei ferramentas para developer experience e atuei em diversas melhorias, correções e novas tecnologias no core da plataforma.",
+          date: "Nov/18 - Nov/20",
+        },
+      ],
     },
     {
-      position: "Líder técnico",
-      provider: "Infracommerce",
-      location: "Vila Olímpia, São Paulo",
-      description:
-        "Fui um dos pilares da construção de uma nova plataforma de e-commerce B2B para a empresa, reformulando todo o front-end do site final. Também atuei orientando times multidisciplinares, garantindo a qualidade de código nas equipes que pude acompanhar. Participei da definição de processos internos, criei ferramentas para facilitar estes processos e também realizei diversas melhorias, correções e implementação de novas tecnologias no core da plataforma.",
-      date: "Nov/18 - Nov/20",
-    },
-    {
-      position: "Desenvolvedor front-end",
       provider: "Netshoes",
       location: "Liberdade, São Paulo",
-      description:
-        "Participei da criação de novas features para a plataforma e também para o back-office, integrei novas lojas e participei de forma ativa na disseminação de conhecimento técnico.",
-      date: "Abr/18 - Out/18",
+      positions: [
+        {
+          position: "Desenvolvedor front-end",
+          description:
+            "Participei da criação de novas features para a plataforma e também para o back-office, integrei novas lojas e participei de forma ativa na disseminação de conhecimento técnico.",
+          date: "Abr/18 - Out/18",
+        },
+      ],
     },
     {
-      position: "Líder técnico front-end",
       provider: "Infracommerce",
       location: "Vila Olímpia, São Paulo",
-      description:
-        "Liderei o desenvolvimento de novas lojas. Atuei coordenando, dando suporte para as equipes e orientando a implantação das lojas desde o escopo, quebra das atividades, até o go live do projeto. Também desenvolvi ferramentas para facilitar o dia a dia da TI da empresa.",
-      date: "Nov/17 - Abr/18",
+      positions: [
+        {
+          position: "Líder técnico front-end",
+          description:
+            "Liderei o desenvolvimento de novas lojas. Atuei coordenando, dando suporte para as equipes e orientando a implantação das lojas desde o escopo, quebra das atividades, até o go live do projeto. Também desenvolvi ferramentas para facilitar o dia a dia da TI da empresa.",
+          date: "Nov/17 - Abr/18",
+        },
+        {
+          position: "Desenvolvedor front-end",
+          description:
+            "Atuei como desenvolvedor em diversos e-commerces de médio e grande porte, tanto na implementação de novas features, quanto melhorias e correções de bugs.",
+          date: "Jul/16 - Nov/17",
+          awards: ["Prêmio de revelação TI 2016"],
+        },
+      ],
     },
     {
-      position: "Desenvolvedor front-end",
-      provider: "Infracommerce",
-      location: "Vila Olímpia, São Paulo",
-      description:
-        "Atuei como desenvolvedor em diversos e-commerces de médio e grande porte, tanto na implementação de novas features, quanto melhorias e correções de bugs.",
-      date: "Jul/16 - Nov/17",
-      awards: ["Prêmio de revelação TI 2016"],
-    },
-    {
-      position: "Desenvolvedor full Stack",
       provider: "Agevole",
       location: "Santo Amaro, São Paulo",
-      description:
-        "Criei e mantive sites institucionais, portais, hotsites promocionais, todos com CMS próprio. Também criei sites em WordPress e ferramentas para melhorar processos, além de auxiliar a equipe em questões de web e digital.",
-      date: "Jan/14 - Mar/16",
+      positions: [
+        {
+          position: "Desenvolvedor Fullstack",
+          description:
+            "Criei e mantive sites institucionais, portais, hotsites promocionais, todos com CMS próprio. Também criei sites em WordPress e ferramentas para melhorar processos, além de auxiliar a equipe em questões de web e digital.",
+          date: "Jan/14 - Mar/16",
+        },
+      ],
     },
   ],
   complementary: [
@@ -210,7 +230,7 @@ const personalData: PersonalData = {
   ],
   nodeLists: {
     experience: {
-      title: "Tenho experiência ou já trabalhei com...",
+      title: "Tenho experiência/já trabalhei com...",
       items: [
         "HTML",
         "CSS",
@@ -220,26 +240,29 @@ const personalData: PersonalData = {
         "Docker Compose",
         "Chrome Extensions",
         "JavaScript",
+        "TypeScript",
         "TDD",
         "E2E Tests",
         "ES6+",
+        "Next.js",
         "React",
         "Redux",
         "Material UI",
         "Vuetify",
         "Vue.js",
+        "Ember 2",
         "jQuery",
         "Git",
-        "SVN",
+        "Git Flow",
         "CI/CD",
         "Gitlab CI",
+        "CircleCI",
         "Webpack",
         "Express",
         "Node.js",
         "MongoDB",
-        "Mustache.js",
+        "Handlebars",
         "Apache Webserver",
-        "Apache Velocity",
         "PHP",
         "MySQL",
         "WordPress",
@@ -253,16 +276,16 @@ const personalData: PersonalData = {
       ],
     },
     stillLearning: {
-      title: "Aperfeiçoando...",
+      title: "Aprendendo...",
       items: [
         "GraphQL",
+        "Kotlin com Spring",
+        "Ruby on Rails",
         "ELK Stack",
         "Elixir",
-        "TypeScript",
         "Golang",
         "Kafka",
         "RabbitMQ",
-        "gRPC",
       ],
     },
     softwares: {
