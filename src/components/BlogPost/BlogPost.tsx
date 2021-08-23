@@ -12,7 +12,7 @@ export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({
     <div className="blog-post">
       <PostMeta post={post} />
       {post.bannerPhoto && (
-        <img className="blog-post-image" src={post.bannerPhoto} />
+        <img className="blog-post-image" src={post.bannerPhoto} alt="" />
       )}
 
       <div className="blog-post-title">
@@ -23,7 +23,7 @@ export const BlogPost: React.FunctionComponent<{ post: PostData }> = ({
       </div>
 
       <div className="blog-post-content">
-        <Markdown children={post.content} />
+        <Markdown>{post.content}</Markdown>
       </div>
     </div>
   );

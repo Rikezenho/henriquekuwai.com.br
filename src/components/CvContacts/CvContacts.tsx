@@ -30,7 +30,7 @@ const CvContacts: React.FC<Contacts> = (props: Contacts) => {
           {web ? (
             <div className="item" title="Website">
               <AiOutlineGlobal />{" "}
-              <a href={web} target="_blank">
+              <a href={web} target="_blank" rel="noreferrer">
                 {web}
               </a>
             </div>
@@ -38,7 +38,7 @@ const CvContacts: React.FC<Contacts> = (props: Contacts) => {
           {github ? (
             <div className="item" title="Github">
               <AiOutlineGithub />{" "}
-              <a href={github} target="_blank">
+              <a href={github} target="_blank" rel="noreferrer">
                 {github}
               </a>
             </div>

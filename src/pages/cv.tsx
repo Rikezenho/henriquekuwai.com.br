@@ -100,7 +100,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
             {contacts.linkedin ? (
               <div className="additional-info linkedIn-info">
                 <AiFillLinkedin /> Veja mais no meu LinkedIn:{" "}
-                <a href={contacts.linkedin} target="_blank">
+                <a href={contacts.linkedin} target="_blank" rel="noreferrer">
                   {contacts.linkedin}
                 </a>
               </div>
@@ -108,7 +108,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
             {repositoryUrl ? (
               <div className="additional-info github-info">
                 <AiFillGithub /> Código-fonte do currículo:{" "}
-                <a href={repositoryUrl} target="_blank">
+                <a href={repositoryUrl} target="_blank" rel="noreferrer">
                   {repositoryUrl}
                 </a>
               </div>

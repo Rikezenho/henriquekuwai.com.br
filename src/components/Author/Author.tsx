@@ -15,7 +15,7 @@ export const Author: React.FC<{ post: PostData }> = (props) => {
     <div className="author-container">
       <div className="author">
         {props.post.authorPhoto && (
-          <img src={props.post.authorPhoto} className="author-image" />
+          <img src={props.post.authorPhoto} className="author-image" alt="" />
         )}
         <AuthorLines post={props.post} />
       </div>

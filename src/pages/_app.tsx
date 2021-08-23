@@ -42,10 +42,6 @@ const App: React.FC = ({ Component, pageProps }: any) => {
   return (
     <div className="container">
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700"
-        />
         {globals.googleAnalyticsId && (
           <script
             async

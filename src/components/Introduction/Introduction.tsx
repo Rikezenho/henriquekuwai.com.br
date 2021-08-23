@@ -29,7 +29,8 @@ export const Introduction: React.FC<IIntroductionProps> = ({
     <IntroductionWrapper>
       <main>
         <IntroductionTitle>
-          <Image src={logo} /> <span className="text">Henrique Kuwai</span>
+          <Image src={logo} alt="" />{" "}
+          <span className="text">Henrique Kuwai</span>
         </IntroductionTitle>
         <IntroductionSubtitle>
           JavaScript &amp; CSS lover.

@@ -14,8 +14,12 @@ const CvJob: React.FC<ICVJobProps> = (props: ICVJobProps) => {
       <h3 className="title">
         {provider} - {location}
       </h3>
-      {positions.map((positionData) => (
-        <CvPosition positionData={positionData} highlight={highlight} />
+      {positions.map((positionData, index) => (
+        <CvPosition
+          key={`jobPosition-${index}`}
+          positionData={positionData}
+          highlight={highlight}
+        />
       ))}
     </Job>
   );

@@ -12,7 +12,7 @@ const CvHeader: React.FC<Personal> = (props: Personal) => {
   return (
     <div className="header">
       <div className="logo">
-        <Image src={logo} />
+        <Image src={logo} alt="" />
       </div>
       <div className="text">
         <h1>{name}</h1>
