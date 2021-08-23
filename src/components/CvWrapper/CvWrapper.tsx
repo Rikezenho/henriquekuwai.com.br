@@ -100,32 +100,6 @@ const StyledCvWrapper = styled.div`
       padding-left: 20px;
     }
 
-    .ul-complementary-courses {
-      list-style-type: none;
-      display: flex;
-      flex-wrap: wrap;
-
-      li.item {
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 33.3333333%;
-        padding: 10px;
-
-        .subtitle,
-        .date {
-          display: inline-block;
-        }
-        .title {
-          font-size: $font-size;
-        }
-        .date {
-          &:before {
-            content: " - ";
-          }
-        }
-      }
-    }
-
     .ul-nodelists {
       li.item {
         display: inline-block;
@@ -169,15 +143,6 @@ const StyledCvWrapper = styled.div`
         padding-top: 20px;
         padding-left: 0;
       }
-
-      .ul-complementary-courses {
-        display: block;
-
-        li.item {
-          display: block;
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -191,16 +156,6 @@ const StyledCvWrapper = styled.div`
     }
     .about {
       padding: 10px 0;
-    }
-
-    .conteudo {
-      .ul-complementary-courses {
-        li.item {
-          display: inline-block !important;
-          width: 50% !important;
-          padding: 0 10px !important;
-        }
-      }
     }
   }
 `;

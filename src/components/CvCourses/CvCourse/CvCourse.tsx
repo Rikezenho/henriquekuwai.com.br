@@ -1,19 +1,19 @@
-import { School } from "../../data";
-import { CourseWrapper } from "./styles";
+import { School } from "../../../data";
+import { CourseInfo, CourseLogo, CourseWrapper } from "./styles";
 
 const CvCourse: React.FC<School> = (props: School) => {
   const { logo, course, institute, date } = props;
 
   return (
     <CourseWrapper className="course-item">
-      <div className="logo">
+      <CourseLogo>
         <img src={`/img/cv/${logo}`} />
-      </div>
-      <div className="info">
+      </CourseLogo>
+      <CourseInfo>
         <div className="title">{course}</div>
         <div className="subtitle">{institute}</div>
         <div className="date">{date}</div>
-      </div>
+      </CourseInfo>
     </CourseWrapper>
   );
 };
