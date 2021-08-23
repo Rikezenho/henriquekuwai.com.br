@@ -1,12 +1,14 @@
 import { StyledSocialAnchor } from "./styles";
 
-interface ISocialAnchorProps {
+export interface ISocialAnchorProps {
   children: any;
   color: string;
   title?: string;
   url?: string;
   target?: string;
-  styleProps?: object;
+  styleProps?: {
+    bgColor: string;
+  };
 }
 
 const SocialAnchor: React.FC<ISocialAnchorProps> = ({

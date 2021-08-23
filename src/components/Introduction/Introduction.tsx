@@ -40,7 +40,11 @@ export const Introduction: React.FC<IIntroductionProps> = ({
           <CurrentJob employees={employees} />
         </IntroductionSubtitle>
         <section style={{ paddingTop: "15px" }}>
-          <SocialAnchor url={`mailto:${email}`} color="#000" bgColor="#EFEFEF">
+          <SocialAnchor
+            url={`mailto:${email}`}
+            color="#000"
+            styleProps={{ backgroundColor: "#EFEFEF" }}
+          >
             <AiTwotoneMail /> Email
           </SocialAnchor>
           <Link href="/cv" passHref>
