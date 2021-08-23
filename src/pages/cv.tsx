@@ -72,7 +72,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                         {languages.map((language: string, index: number) => (
                           <span key={`language-${index}`}>
                             {language}
-                            {index !== language.length - 1 ? ", " : null}
+                            {index !== languages.length - 1 ? ", " : null}
                           </span>
                         ))}
                       </div>
