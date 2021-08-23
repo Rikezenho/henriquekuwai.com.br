@@ -8,7 +8,9 @@ const CourseWrapper = styled.li`
   .bio & {
     border: 0;
     border-radius: 0;
-    padding: 5px 5px 5px 0;
+    padding: 0 0 0 10px;
+    border-left: 2px solid #ccc;
+    margin: 5px 0;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobileL}) {
@@ -25,7 +27,7 @@ const CourseWrapper = styled.li`
 const CourseInfo = styled.div`
   .title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1rem;
   }
 `;
 
