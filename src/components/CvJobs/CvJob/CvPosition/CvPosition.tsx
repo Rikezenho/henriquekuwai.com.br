@@ -1,4 +1,4 @@
-import { EmployeePosition } from "../../../data";
+import { EmployeePosition } from "../../../../data";
 import { CvAwards } from "../CvAwards";
 import { JobDate, JobPosition, JobPositionTitle } from "./styles";
 

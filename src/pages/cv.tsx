@@ -5,6 +5,7 @@ import { CvCourses } from "../components/CvCourses";
 import { CvCourse } from "../components/CvCourses/CvCourse";
 import { CvHeader } from "../components/CvHeader";
 import { CvJob } from "../components/CvJob";
+import { CvJobs } from "../components/CvJobs/CvJobs";
 import { CvWrapper } from "../components/CvWrapper";
 import { Employee, PersonalData } from "../data";
 
@@ -93,13 +94,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
             {employees.length ? (
               <section className="history-wrapper has-hr">
                 <h2>Experiência profissional</h2>
-                <ul className="ul-history">
-                  {employees.map((employee: Employee, index: number) => (
-                    <li key={`history-${index}`} className="item">
-                      <CvJob {...employee} highlight={index === 0} />
-                    </li>
-                  ))}
-                </ul>
+                <CvJobs employees={employees} />
               </section>
             ) : null}
 

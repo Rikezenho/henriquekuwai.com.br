@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Job = styled.div`
+const Job = styled.li`
   padding: 10px 0;
   position: relative;
 
