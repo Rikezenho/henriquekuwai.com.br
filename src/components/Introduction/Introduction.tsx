@@ -39,24 +39,32 @@ export const Introduction: React.FC<IIntroductionProps> = ({
           Focusing in front-end since {frontendSince}.
           <CurrentJob employees={employees} />
         </IntroductionSubtitle>
-        <section>
+        <section style={{ paddingTop: "15px" }}>
           <SocialAnchor url={`mailto:${email}`} color="#000" bgColor="#EFEFEF">
             <AiTwotoneMail /> Email
           </SocialAnchor>
           <Link href="/cv" passHref>
             <SocialAnchor
               color="#000"
-              bgColor="#EFEFEF"
+              styleProps={{ backgroundColor: "#EFEFEF" }}
               target=""
               title="Curriculum"
             >
               <RiFilePaper2Fill /> CV
             </SocialAnchor>
           </Link>
-          <SocialAnchor url={linkedin} color="#FFF" bgColor="#006397">
+          <SocialAnchor
+            url={linkedin}
+            color="#FFF"
+            styleProps={{ backgroundColor: "#006397" }}
+          >
             <AiFillLinkedin /> LinkedIn
           </SocialAnchor>
-          <SocialAnchor url={github} color="#FFF" bgColor="#000">
+          <SocialAnchor
+            url={github}
+            color="#FFF"
+            styleProps={{ backgroundColor: "#000" }}
+          >
             <AiFillGithub /> Github
           </SocialAnchor>
         </section>
