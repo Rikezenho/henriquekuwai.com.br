@@ -1,28 +1,22 @@
 import { Employee } from "../../data";
-import { AiFillTrophy } from "react-icons/ai";
+import { CvPosition } from "./CvPosition";
 import { Job } from "./styles";
 
-const CvJob: React.FC<Employee> = (props: Employee) => {
-  const { date, position, provider, description, awards } = props;
+interface ICVJobProps extends Employee {
+  highlight: boolean;
+}
+
+const CvJob: React.FC<ICVJobProps> = (props: ICVJobProps) => {
+  const { provider, location, positions, highlight } = props;
 
   return (
     <Job className="job-item">
-      <div className="title">
-        <div className="date">{date}</div>
-        <span className="text">{position}</span>
-      </div>
-      <div className="provider">{provider}</div>
-      {description ? <div className="description">{description}</div> : null}
-      {awards?.length ? (
-        <div className="awards">
-          {awards.map((title, key) => (
-            <div key={key} className="award-item">
-              <AiFillTrophy className="icon" />{" "}
-              <span className="info">{title}</span>
-            </div>
-          ))}
-        </div>
-      ) : null}
+      <h3 className="title">
+        {provider} - {location}
+      </h3>
+      {positions.map((positionData) => (
+        <CvPosition positionData={positionData} highlight={highlight} />
+      ))}
     </Job>
   );
 };

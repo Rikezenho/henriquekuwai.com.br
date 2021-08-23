@@ -77,6 +77,10 @@ const StyledCvWrapper = styled.div`
 
     .bio-wrapper {
       padding: 20px 0;
+
+      .item {
+        padding-bottom: 5px;
+      }
     }
     .history-wrapper {
       .ul-history {
@@ -172,6 +176,29 @@ const StyledCvWrapper = styled.div`
         li.item {
           display: block;
           width: 100%;
+        }
+      }
+    }
+  }
+
+  @media print {
+    .content {
+      width: 95%;
+    }
+
+    .header {
+      padding: 0;
+    }
+    .about {
+      padding: 10px 0;
+    }
+
+    .conteudo {
+      .ul-complementary-courses {
+        li.item {
+          display: inline-block !important;
+          width: 50% !important;
+          padding: 0 10px !important;
         }
       }
     }
