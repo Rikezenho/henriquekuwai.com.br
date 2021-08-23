@@ -5,7 +5,7 @@ const StyledSocialAnchor = styled.a<ISocialAnchorProps>`
   display: inline-block;
   padding: 5px 10px;
   color: ${(props) => props.color};
-  background-color: ${(props) => props.styleProps?.bgColor};
+  background-color: ${(props) => props.styleProps?.backgroundColor};
   border-radius: 25px;
   text-decoration: none;
   transition: transform 0.2s ease;

@@ -7,7 +7,7 @@ export interface ISocialAnchorProps {
   url?: string;
   target?: string;
   styleProps?: {
-    bgColor: string;
+    backgroundColor: string;
   };
 }
 
