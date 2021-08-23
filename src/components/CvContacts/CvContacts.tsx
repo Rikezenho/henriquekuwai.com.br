@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import { About } from "./styles";
 
-const CvAbout: React.FC<Contacts> = (props: Contacts) => {
+const CvContacts: React.FC<Contacts> = (props: Contacts) => {
   const { phone, email, web, github, address } = props;
 
   return (
@@ -54,4 +54,4 @@ const CvAbout: React.FC<Contacts> = (props: Contacts) => {
   );
 };
 
-export { CvAbout };
+export { CvContacts };

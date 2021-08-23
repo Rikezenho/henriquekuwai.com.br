@@ -1,13 +1,12 @@
 import Head from "next/head";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { CvAbout } from "../components/CvAbout";
+import { CvContacts } from "../components/CvContacts";
 import { CvCourses } from "../components/CvCourses";
 import { CvCourse } from "../components/CvCourses/CvCourse";
 import { CvHeader } from "../components/CvHeader";
-import { CvJob } from "../components/CvJob";
 import { CvJobs } from "../components/CvJobs/CvJobs";
 import { CvWrapper } from "../components/CvWrapper";
-import { Employee, PersonalData } from "../data";
+import { PersonalData } from "../data";
 
 export const getStaticProps = async () => {
   const { personalData } = await import("../data");
@@ -53,7 +52,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
           <div className="content">
             <CvHeader {...personal} />
           </div>
-          <CvAbout {...contacts} />
+          <CvContacts {...contacts} />
         </header>
         <main className="conteudo">
           <div className="content">
