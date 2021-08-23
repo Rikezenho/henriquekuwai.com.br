@@ -215,7 +215,7 @@ const personalData: PersonalData = {
   ],
   nodeLists: {
     experience: {
-      title: "Tenho experiência/já trabalhei com...",
+      title: "Tenho experiência ou já trabalhei com...",
       items: [
         "HTML",
         "CSS",
