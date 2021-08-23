@@ -1,17 +1,15 @@
-import { Complementary, School } from "../../data";
+import { Course } from "../../data";
 import { CvCourse } from "./CvCourse/CvCourse";
 import { CoursesWrapper } from "./styles";
 
 interface ICvCoursesProps {
-  complementary: Array<School>;
+  courses: Array<Course>;
 }
 
-const CvCourses: React.FC<ICvCoursesProps> = ({
-  complementary,
-}: ICvCoursesProps) => {
+const CvCourses: React.FC<ICvCoursesProps> = ({ courses }: ICvCoursesProps) => {
   return (
     <CoursesWrapper>
-      {complementary.map((course: Complementary, index: number) => (
+      {courses.map((course: Course, index: number) => (
         <CvCourse key={`course-${index}`} {...course} />
       ))}
     </CoursesWrapper>

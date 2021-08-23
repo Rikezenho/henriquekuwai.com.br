@@ -2,20 +2,13 @@ export interface PersonalData {
   lastUpdate: string;
   description: string;
   languages: string[];
-  school: School;
+  school: Course;
   dates: Dates;
   contacts: Contacts;
   personal: Personal;
   employees: Employee[];
-  complementary: Complementary[];
+  complementary: Course[];
   nodeLists: NodeLists;
-}
-
-export interface School {
-  institute: string;
-  course: string;
-  date: string;
-  logo: string;
 }
 
 export interface Dates {
@@ -53,11 +46,10 @@ export interface EmployeePosition {
   awards?: string[];
 }
 
-export interface Complementary {
+export interface Course {
   institute: string;
   course: string;
   date: string;
-  logo: string;
 }
 
 export interface NodeLists {
@@ -94,7 +86,6 @@ const personalData: PersonalData = {
     institute: "Universidade Presbiteriana Mackenzie",
     course: "Bacharelado em Publicidade e Propaganda",
     date: "Jan/2012 - Dez/2015",
-    logo: "mackenzie.png",
   },
   dates: {
     developingSince: 2008,
@@ -123,7 +114,7 @@ const personalData: PersonalData = {
         {
           position: "Specialist Engineer",
           description:
-            "Lidero a evolução de um app focado em financiamento automotivo B2B, principalmente na parte de front-end, mas também atuo em demandas com outras tecnologias - tanto na parte mais voltada ao cliente externo, quanto para o cliente interno.",
+            "Lidero a evolução (principalmente na parte de front-end) de um app focado em financiamento automotivo B2B, e também atuo em demandas com outras tecnologias. Atuo tanto na parte do produto mais voltada ao cliente externo, quanto para o cliente interno.",
           date: "Abr/21 - Atual",
         },
       ],
@@ -195,37 +186,31 @@ const personalData: PersonalData = {
       institute: "Udemy (online)",
       course: "Desenvolvimento AWS 2020 com foco em Serverless",
       date: "Abr/2021",
-      logo: "udemy.png",
     },
     {
       institute: "Udemy (online)",
       course: "Entendendo TypeScript",
       date: "Mar/2021",
-      logo: "udemy.png",
     },
     {
       institute: "Udemy (online)",
       course: "Docker: Ferramenta essencial para desenvolvedores",
       date: "Nov/2018",
-      logo: "udemy.png",
     },
     {
       institute: "Udemy (online)",
       course: "React + Redux (by Leonardo Moura Leitão)",
       date: "Set/2018",
-      logo: "udemy.png",
     },
     {
       institute: "Udemy (online)",
       course: "Learn and Understand NodeJS (by Tony Alicea)",
       date: "Jun/2018",
-      logo: "udemy.png",
     },
     {
       institute: "Alura (online)",
       course: "Vue.js parte 2: construindo Single Page Applications",
       date: "Dez/2017",
-      logo: "alura.png",
     },
   ],
   nodeLists: {

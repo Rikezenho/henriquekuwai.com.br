@@ -57,7 +57,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
         <main className="conteudo">
           <div className="content">
             {description || languages.length ? (
-              <div className="bio-wrapper">
+              <section className="bio-wrapper">
                 <h2>Sobre</h2>
                 <div className="flex-wrapper">
                   <div
@@ -82,16 +82,16 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                       <div className="item">
                         <strong>Formação acadêmica:</strong>
                         <br />
-                        <CvCourse {...school} />
+                        <CvCourse {...school} single />
                       </div>
                     ) : null}
                   </div>
                 </div>
-              </div>
+              </section>
             ) : null}
 
             {employees.length ? (
-              <div className="history-wrapper has-hr">
+              <section className="history-wrapper has-hr">
                 <h2>Experiência profissional</h2>
                 <ul className="ul-history">
                   {employees.map((employee: Employee, index: number) => (
@@ -100,19 +100,19 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                     </li>
                   ))}
                 </ul>
-              </div>
+              </section>
             ) : null}
 
             {complementary.length ? (
-              <div className="complementary-wrapper has-hr avoid-page-break">
+              <section className="complementary-wrapper has-hr avoid-page-break">
                 <h2>Cursos complementares</h2>
-                <CvCourses complementary={complementary} />
-              </div>
+                <CvCourses courses={complementary} />
+              </section>
             ) : null}
 
             {Object.keys(nodeLists).length
               ? Object.entries(nodeLists).map(([key, { title, items }]) => (
-                  <div
+                  <section
                     key={key}
                     className={`${key}-wrapper has-hr avoid-page-break`}
                   >
@@ -124,7 +124,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </section>
                 ))
               : null}
           </div>

@@ -1,14 +1,15 @@
-import { School } from "../../../data";
-import { CourseInfo, CourseLogo, CourseWrapper } from "./styles";
+import { Course } from "../../../data";
+import { CourseInfo, CourseWrapper } from "./styles";
 
-const CvCourse: React.FC<School> = (props: School) => {
-  const { logo, course, institute, date } = props;
+interface ICvCourseProps extends Course {
+  single: boolean;
+}
+
+const CvCourse: React.FC<ICvCourseProps> = (props: ICvCourseProps) => {
+  const { course, institute, date, single } = props;
 
   return (
-    <CourseWrapper className="course-item">
-      <CourseLogo>
-        <img src={`/img/cv/${logo}`} />
-      </CourseLogo>
+    <CourseWrapper className="course-item" as={single ? "div" : "li"}>
       <CourseInfo>
         <div className="title">{course}</div>
         <div className="subtitle">{institute}</div>
