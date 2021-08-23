@@ -2,7 +2,7 @@ import { Course } from "../../../data";
 import { CourseInfo, CourseWrapper } from "./styles";
 
 interface ICvCourseProps extends Course {
-  single: boolean;
+  single?: boolean;
 }
 
 const CvCourse: React.FC<ICvCourseProps> = (props: ICvCourseProps) => {

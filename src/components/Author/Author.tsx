@@ -1,6 +1,6 @@
-import React from 'react';
-import { format } from 'fecha';
-import { PostData } from '../loader';
+import React from "react";
+import { format } from "fecha";
+import { PostData } from "../../loader";
 
 export const FollowButton = () => {
   return (
@@ -31,17 +31,17 @@ export const AuthorLines: React.FC<{ post: PostData }> = (props) => {
 
         {props.post.authorTwitter && (
           <span>
-            {' '}
+            {" "}
             <a
               href={`https://twitter.com/${props.post.authorTwitter}`}
-            >{`@${props.post.authorTwitter}`}</a>{' '}
+            >{`@${props.post.authorTwitter}`}</a>{" "}
           </span>
         )}
       </p>
       <p className="author-line subtle">
         {props.post.datePublished
-          ? format(new Date(props.post.datePublished), 'MMMM Do, YYYY')
-          : ''}
+          ? format(new Date(props.post.datePublished), "MMMM Do, YYYY")
+          : ""}
       </p>
     </div>
   );

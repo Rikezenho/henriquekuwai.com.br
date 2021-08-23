@@ -23,7 +23,7 @@ export const Markdown: React.FC<{ children: string }> = (props) => {
                 language={match[1]}
                 PreTag="div"
                 style={darcula}
-                {...props}
+                // {...props}
               />
             ) : (
               <code className={className} {...props}>
