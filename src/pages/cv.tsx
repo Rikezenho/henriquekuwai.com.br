@@ -1,11 +1,12 @@
 import Head from "next/head";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { CvAbout } from "../components/CvAbout";
-import { CvCourse } from "../components/CvCourse";
+import { CvCourses } from "../components/CvCourses";
+import { CvCourse } from "../components/CvCourses/CvCourse";
 import { CvHeader } from "../components/CvHeader";
 import { CvJob } from "../components/CvJob";
 import { CvWrapper } from "../components/CvWrapper";
-import { Complementary, Employee, PersonalData } from "../data";
+import { Employee, PersonalData } from "../data";
 
 export const getStaticProps = async () => {
   const { personalData } = await import("../data");
@@ -95,7 +96,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
                 <ul className="ul-history">
                   {employees.map((employee: Employee, index: number) => (
                     <li key={`history-${index}`} className="item">
-                      <CvJob {...employee} />
+                      <CvJob {...employee} highlight={index === 0} />
                     </li>
                   ))}
                 </ul>
@@ -105,13 +106,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
             {complementary.length ? (
               <div className="complementary-wrapper has-hr avoid-page-break">
                 <h2>Cursos complementares</h2>
-                <ul className="ul-complementary-courses">
-                  {complementary.map((course: Complementary, index: number) => (
-                    <li key={`course-${index}`} className="item">
-                      <CvCourse {...course} />
-                    </li>
-                  ))}
-                </ul>
+                <CvCourses complementary={complementary} />
               </div>
             ) : null}
 
