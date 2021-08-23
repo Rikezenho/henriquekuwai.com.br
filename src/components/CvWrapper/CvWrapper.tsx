@@ -47,11 +47,6 @@ const StyledCvWrapper = styled.div`
     columns: 2;
   }
 
-  .flex-wrapper {
-    display: flex;
-    align-items: flex-start;
-  }
-
   .header {
     display: flex;
     align-items: center;
@@ -74,31 +69,6 @@ const StyledCvWrapper = styled.div`
 
   .conteudo {
     padding-bottom: 20px;
-
-    .bio-wrapper {
-      padding: 20px 0;
-
-      .item {
-        padding-bottom: 5px;
-      }
-    }
-    .history-wrapper {
-      .ul-history {
-        list-style-type: none;
-      }
-    }
-
-    .sobre,
-    .bio {
-      width: 50%;
-      font-size: $font-size;
-    }
-    .sobre {
-      padding-right: 20px;
-    }
-    .bio {
-      padding-left: 20px;
-    }
 
     .ul-nodelists {
       li.item {
@@ -127,22 +97,6 @@ const StyledCvWrapper = styled.div`
     }
     .content {
       width: 90%;
-    }
-
-    .flex-wrapper {
-      display: block;
-    }
-
-    .conteudo {
-      .sobre,
-      .bio {
-        display: block;
-        width: 100%;
-      }
-      .bio {
-        padding-top: 20px;
-        padding-left: 0;
-      }
     }
   }
 

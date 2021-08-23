@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { AboutBio } from "../../CvAbout/styles";
 
 const CourseWrapper = styled.li`
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 15px;
 
-  .bio & {
+  ${AboutBio} & {
     border: 0;
     border-radius: 0;
     padding: 0 0 0 10px;

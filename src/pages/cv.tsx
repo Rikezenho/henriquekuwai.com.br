@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { CvAbout } from "../components/CvAbout/CvAbout";
 import { CvContacts } from "../components/CvContacts";
 import { CvCourses } from "../components/CvCourses";
-import { CvCourse } from "../components/CvCourses/CvCourse";
 import { CvHeader } from "../components/CvHeader";
 import { CvJobs } from "../components/CvJobs/CvJobs";
 import { CvWrapper } from "../components/CvWrapper";
@@ -56,39 +56,11 @@ const Curriculum: React.FC<ICurriculumProps> = ({
         </header>
         <main className="conteudo">
           <div className="content">
-            {description || languages.length ? (
-              <section className="bio-wrapper">
-                <h2>Sobre</h2>
-                <div className="flex-wrapper">
-                  <div
-                    className="sobre"
-                    dangerouslySetInnerHTML={{ __html: description }}
-                  ></div>
-                  <div className="bio">
-                    {languages.length ? (
-                      <div className="item">
-                        <strong>Idiomas:</strong>
-                        <br />
-                        {languages.map((language: string, index: number) => (
-                          <span key={`language-${index}`}>
-                            {language}
-                            {index !== languages.length - 1 ? ", " : null}
-                          </span>
-                        ))}
-                      </div>
-                    ) : null}
-
-                    {school ? (
-                      <div className="item">
-                        <strong>Formação acadêmica:</strong>
-                        <br />
-                        <CvCourse {...school} single />
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-              </section>
-            ) : null}
+            <CvAbout
+              description={description}
+              languages={languages}
+              school={school}
+            />
 
             {employees.length ? (
               <section className="history-wrapper has-hr">
