@@ -8,7 +8,7 @@ const CourseWrapper = styled.li`
   .bio & {
     border: 0;
     border-radius: 0;
-    padding-left: 0;
+    padding: 5px 5px 5px 0;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobileL}) {
