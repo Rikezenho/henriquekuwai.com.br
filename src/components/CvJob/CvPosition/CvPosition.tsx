@@ -1,6 +1,6 @@
 import { EmployeePosition } from "../../../data";
 import { CvAwards } from "../CvAwards";
-import { JobDate, JobPosition } from "./styles";
+import { JobDate, JobPosition, JobPositionTitle } from "./styles";
 
 interface ICvPositionProps {
   positionData: EmployeePosition;
@@ -14,10 +14,10 @@ const CvPosition: React.FC<ICvPositionProps> = ({
   const { date, position, description, awards } = positionData;
   return (
     <JobPosition className={`position ${highlight ? "highlight" : ""}`}>
-      <h4 className="position-name">
+      <JobPositionTitle>
         <JobDate>{date}</JobDate>
         {position}
-      </h4>
+      </JobPositionTitle>
       {description ? <div className="description">{description}</div> : null}
       <CvAwards awards={awards} />
     </JobPosition>

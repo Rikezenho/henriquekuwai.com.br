@@ -9,6 +9,10 @@ const JobPosition = styled.div`
   }
 `;
 
+const JobPositionTitle = styled.h4`
+  color: #555;
+`;
+
 const JobDate = styled.div`
   border: 2px solid #ccc;
   padding: 0 10px;
@@ -23,4 +27,4 @@ const JobDate = styled.div`
   }
 `;
 
-export { JobPosition, JobDate };
+export { JobPosition, JobPositionTitle, JobDate };
