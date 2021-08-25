@@ -17,8 +17,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "next lint",
-    "deploy": "next build && next export && firebase deploy --only hosting"
+    "lint": "next lint"
   },
   "dependencies": {
     "fecha": "^4.2.1",
