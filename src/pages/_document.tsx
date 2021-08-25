@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
         <Head>
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&display=optional"
+            href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&display=swap"
           />
         </Head>
         <body>
