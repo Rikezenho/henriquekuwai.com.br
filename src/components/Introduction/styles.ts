@@ -16,12 +16,16 @@ const IntroductionTitle = styled.h1`
   letter-spacing: 1px;
   margin: 0;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobileL}) {
-    font-size: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    font-size: 3.5rem;
     line-height: 1.2;
+
+    .text {
+      display: block;
+    }
   }
   @media (max-width: ${(props) => props.theme.breakpoints.mobileM}) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -32,12 +36,21 @@ const IntroductionSubtitle = styled.h2`
   padding-bottom: 0px;
   line-height: 1.4;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobileL}) {
-    font-size: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    font-size: 1.8rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.mobileM}) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `;
 
-export { IntroductionWrapper, IntroductionTitle, IntroductionSubtitle };
+const IntroductionLinks = styled.section`
+  padding-top: 15px;
+`;
+
+export {
+  IntroductionWrapper,
+  IntroductionTitle,
+  IntroductionSubtitle,
+  IntroductionLinks,
+};

@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Fira Sans', Helvetica, sans-serif;
     line-height: 1.4;
-    font-size: 1rem;
+    font-size: 16px;
     color: ${theme.colors.text.primary};
   }
 `;

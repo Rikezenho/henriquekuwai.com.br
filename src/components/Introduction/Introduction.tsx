@@ -10,6 +10,7 @@ import {
   IntroductionWrapper,
   IntroductionTitle,
   IntroductionSubtitle,
+  IntroductionLinks,
 } from "./styles";
 
 interface IIntroductionProps {
@@ -40,7 +41,7 @@ export const Introduction: React.FC<IIntroductionProps> = ({
           Focusing in front-end since {frontendSince}.
           <CurrentJob employees={employees} />
         </IntroductionSubtitle>
-        <section style={{ paddingTop: "15px" }}>
+        <IntroductionLinks>
           <SocialAnchor
             url={`mailto:${email}`}
             color="#000"
@@ -72,7 +73,7 @@ export const Introduction: React.FC<IIntroductionProps> = ({
           >
             <AiFillGithub /> Github
           </SocialAnchor>
-        </section>
+        </IntroductionLinks>
       </main>
     </IntroductionWrapper>
   );
