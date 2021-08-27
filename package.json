@@ -13,7 +13,7 @@
   },
   "homepage": "https://www.henriquekuwai.com.br",
   "scripts": {
-    "dev": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
