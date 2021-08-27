@@ -13,12 +13,12 @@ const CurrentJob: React.FC<ICurrentJobProps> = ({
   return provider ? (
     <>
       <br />
-      💼 Currently employed at <Highlight>{provider}</Highlight>.
+      💼 Working at <Highlight>{provider}</Highlight>.
     </>
   ) : (
     <>
       <br />
-      🔎 Currently <Highlight>available for jobs</Highlight>.
+      🔎 <Highlight>Available for jobs</Highlight>.
     </>
   );
 };
