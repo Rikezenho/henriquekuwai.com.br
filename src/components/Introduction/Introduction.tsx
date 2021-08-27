@@ -46,6 +46,7 @@ export const Introduction: React.FC<IIntroductionProps> = ({
             url={`mailto:${email}`}
             color="#000"
             styleProps={{ backgroundColor: "#EFEFEF" }}
+            title="E-mail"
           >
             <AiTwotoneMail /> Email
           </SocialAnchor>
@@ -63,6 +64,7 @@ export const Introduction: React.FC<IIntroductionProps> = ({
             url={linkedin}
             color="#FFF"
             styleProps={{ backgroundColor: "#006397" }}
+            title="LinkedIn"
           >
             <AiFillLinkedin /> LinkedIn
           </SocialAnchor>
@@ -70,6 +72,7 @@ export const Introduction: React.FC<IIntroductionProps> = ({
             url={github}
             color="#FFF"
             styleProps={{ backgroundColor: "#000" }}
+            title="Github"
           >
             <AiFillGithub /> Github
           </SocialAnchor>

@@ -9,9 +9,12 @@ const StyledSocialAnchor = styled.a<ISocialAnchorProps>`
   border-radius: 25px;
   text-decoration: none;
   transition: transform 0.2s ease;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0;
   margin-right: 10px;
+
+  svg {
+    font-size: 1.5rem;
+  }
 
   &:hover,
   &:focus {
