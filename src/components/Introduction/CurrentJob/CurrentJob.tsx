@@ -1,24 +1,26 @@
-import { Employee } from "../../../data";
+import { Employee } from "../../../types/data";
+import { IntroductionData } from "../../../types/introduction";
 import { Highlight } from "./styles";
 
 interface ICurrentJobProps {
   employees: Array<Employee>;
+  introduction: IntroductionData;
 }
 
 const CurrentJob: React.FC<ICurrentJobProps> = ({
   employees,
+  introduction,
 }: ICurrentJobProps) => {
   const [{ provider }] = employees;
+  const { currentlyEmployed, lookingForJobs } = introduction;
 
   return provider ? (
     <>
-      <br />
-      💼 Working at <Highlight>{provider}</Highlight>.
+      {currentlyEmployed} <Highlight>{provider}</Highlight>.
     </>
   ) : (
     <>
-      <br />
-      🔎 <Highlight>Available for jobs</Highlight>.
+      <Highlight>{lookingForJobs}</Highlight>.
     </>
   );
 };

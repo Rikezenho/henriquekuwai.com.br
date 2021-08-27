@@ -1,4 +1,4 @@
-import { Course } from "../../data";
+import { Course } from "../../types/data";
 import { CvCourse } from "../CvCourses/CvCourse";
 import {
   AboutBio,

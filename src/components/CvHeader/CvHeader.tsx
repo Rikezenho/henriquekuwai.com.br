@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useMemo } from "react";
 import moment from "moment";
 import logo from "../../../public/logo.png";
-import { Personal } from "../../data";
+import { Personal } from "../../types/data";
 
 const CvHeader: React.FC<Personal> = (props: Personal) => {
   const { name, subtitle, birthDate } = props;

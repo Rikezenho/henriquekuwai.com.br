@@ -1,61 +1,4 @@
-export interface PersonalData {
-  lastUpdate: string;
-  description: string;
-  languages: string[];
-  school: Course;
-  dates: Dates;
-  contacts: Contacts;
-  personal: Personal;
-  employees: Employee[];
-  complementary: Course[];
-  nodeLists: NodeList[];
-}
-
-export interface Dates {
-  developingSince: number;
-  frontendSince: number;
-}
-
-export interface Contacts {
-  phone: string;
-  email: string;
-  web: string;
-  github: string;
-  codesandbox: string;
-  address: string;
-  linkedin: string;
-}
-
-export interface Personal {
-  logo: string;
-  name: string;
-  subtitle: string;
-  birthDate: string;
-}
-
-export interface Employee {
-  provider: string;
-  location: string;
-  positions: Array<EmployeePosition>;
-}
-
-export interface EmployeePosition {
-  position: string;
-  description: string;
-  date: string;
-  awards?: string[];
-}
-
-export interface Course {
-  institute: string;
-  course: string;
-  date: string;
-}
-
-export interface NodeList {
-  title: string;
-  items: string[];
-}
+import { PersonalData } from "../../types/data";
 
 const personalData: PersonalData = {
   lastUpdate: "22 de Agosto de 2021",
@@ -71,10 +14,6 @@ const personalData: PersonalData = {
     course: "Bacharelado em Publicidade e Propaganda",
     date: "Jan/2012 - Dez/2015",
   },
-  dates: {
-    developingSince: 2008,
-    frontendSince: 2015,
-  },
   contacts: {
     phone: "(11) 98877-9888",
     email: "eu@henriquekuwai.com.br",
@@ -87,6 +26,7 @@ const personalData: PersonalData = {
   personal: {
     logo: "logo.png",
     name: "Henrique Hideki Kuwai",
+    shortName: "Henrique Kuwai",
     subtitle: "Solteiro, brasileiro",
     birthDate: "1993-06-20",
   },

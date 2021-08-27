@@ -1,4 +1,4 @@
-import { Employee } from "../../data";
+import { Employee } from "../../types/data";
 import { CvJob } from "./CvJob/CvJob";
 import { JobsWrapper } from "./styles";
 

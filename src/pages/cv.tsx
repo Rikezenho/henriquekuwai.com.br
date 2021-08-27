@@ -1,3 +1,4 @@
+import { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { CvAbout } from "../components/CvAbout/CvAbout";
@@ -6,10 +7,11 @@ import { CvCourses } from "../components/CvCourses";
 import { CvHeader } from "../components/CvHeader";
 import { CvJobs } from "../components/CvJobs/CvJobs";
 import { CvWrapper } from "../components/CvWrapper";
-import { PersonalData } from "../data";
+import { PersonalData } from "../types/data";
+import { getLocale } from "../utils/locale";
 
-export const getStaticProps = async () => {
-  const { personalData } = await import("../data");
+export const getStaticProps = async (context: GetStaticPropsContext) => {
+  const { personalData } = await getLocale(context, ["data"]);
   const {
     repository: { url: repositoryUrl },
   } = await import("../../package.json");

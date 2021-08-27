@@ -1,4 +1,4 @@
-import { Contacts } from "../../data";
+import { Contacts } from "../../types/data";
 import {
   AiOutlineMail,
   AiOutlineGlobal,

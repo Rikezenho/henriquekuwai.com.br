@@ -3,17 +3,24 @@ import { generateRSS } from "../rssUtil";
 import { PostData, loadBlogPosts } from "../loader";
 import { PostCard } from "../components/PostCard";
 import { Introduction } from "../components/Introduction/Introduction";
-import { PersonalData } from "../data";
+import { PersonalData } from "../types/data";
+import type { GetStaticPropsContext } from "next/types";
+import { getLocale } from "../utils/locale";
+import { IntroductionData } from "../types/introduction";
 
-export const getStaticProps = async () => {
+export const getStaticProps = async (context: GetStaticPropsContext) => {
   const posts = await loadBlogPosts();
-  const { personalData } = await import("../data");
+  const { introduction, personalData } = await getLocale(context, [
+    "data",
+    "introduction",
+  ]);
 
   await generateRSS(posts);
 
   const props = {
     posts,
     personalData,
+    introduction,
   };
 
   return { props };
@@ -22,9 +29,14 @@ export const getStaticProps = async () => {
 interface IHomeProps {
   posts: PostData[];
   personalData: PersonalData;
+  introduction: IntroductionData;
 }
 
-const Home: React.FC<IHomeProps> = ({ posts, personalData }: IHomeProps) => {
+const Home: React.FC<IHomeProps> = ({
+  posts,
+  personalData,
+  introduction,
+}: IHomeProps) => {
   return (
     <>
       <div className="content">
@@ -32,7 +44,7 @@ const Home: React.FC<IHomeProps> = ({ posts, personalData }: IHomeProps) => {
           <title>Henrique Kuwai</title>
         </Head>
 
-        <Introduction personalData={personalData} />
+        <Introduction personalData={personalData} introduction={introduction} />
 
         {posts.length ? (
           <div className="section">

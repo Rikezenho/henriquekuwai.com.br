@@ -1,4 +1,4 @@
-import { Course } from "../../../data";
+import { Course } from "../../../types/data";
 import { CourseInfo, CourseWrapper } from "./styles";
 
 interface ICvCourseProps extends Course {

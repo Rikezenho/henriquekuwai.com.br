@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { AiTwotoneMail, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { RiFilePaper2Fill } from "react-icons/ri";
 import logo from "../../../public/logo.png";
-import { PersonalData } from "../../data";
+import { PersonalData } from "../../types/data";
+import { IntroductionData } from "../../types/introduction";
 import { SocialAnchor } from "../SocialAnchor";
 import { CurrentJob } from "./CurrentJob";
 import {
@@ -15,31 +17,30 @@ import {
 
 interface IIntroductionProps {
   personalData: PersonalData;
+  introduction: IntroductionData;
 }
 
 export const Introduction: React.FC<IIntroductionProps> = ({
   personalData,
+  introduction,
 }: IIntroductionProps) => {
   const {
-    dates: { developingSince, frontendSince },
+    personal: { shortName },
     contacts: { email, linkedin, github },
     employees,
   } = personalData;
+
+  const { subtitle } = introduction;
 
   return (
     <IntroductionWrapper>
       <main>
         <IntroductionTitle>
-          <Image src={logo} alt="" />{" "}
-          <span className="text">Henrique Kuwai</span>
+          <Image src={logo} alt="" /> <span className="text">{shortName}</span>
         </IntroductionTitle>
         <IntroductionSubtitle>
-          JavaScript &amp; CSS lover.
-          <br />
-          Developing things for web since {developingSince}.
-          <br />
-          Focusing in front-end since {frontendSince}.
-          <CurrentJob employees={employees} />
+          <div dangerouslySetInnerHTML={{ __html: subtitle }}></div>
+          <CurrentJob employees={employees} introduction={introduction} />
         </IntroductionSubtitle>
         <IntroductionLinks>
           <SocialAnchor
