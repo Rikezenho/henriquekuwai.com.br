@@ -1,35 +1,38 @@
 import { PersonalData } from "../../types/data";
 
 const personalData: PersonalData = {
-  lastUpdate: "22 de Agosto de 2021",
+  aboutTitle: "About me",
   description:
-    "Desenvolvedor desde 2008, trabalhei no mercado de e-commerce de 2016 a 2021, e no momento atuo no mercado de financiamentos. Apesar da afinidade com front-end, já atuei com todas as partes de desenvolvimento, back-end a banco de dados. Executei trabalhos dentro de empresas como Creditas, Infracommerce e Netshoes, e atuei em projetos de clientes como Unilever, Mondelez, Ray-Ban, 3M, Montblanc, Globo, Havaianas, Três Corações, Thomson Reuters, Revista dos Tribunais, Instituto GPA, entre outros.",
+    "I'm developing things since 2008. I've worked in e-commerce market from 2016 to 2021, and currently, I'm working at a fintech from financial market. Despite my preference in front-end, I've already worked in every part of software development: from back-end, to databases. I've did jobs in enterprises like Creditas, Infracommerce and Netshoes, and I've participated in big projects for clients like Unilever, Mondelez, Ray-Ban, 3M, Montblanc, GLobo, Havaianas, Thomson Reuters, and some others.",
+  languagesTitle: "Languages",
   languages: [
-    "Português nativo",
-    "Inglês intermediário/técnico",
-    "Espanhol básico",
+    "Native portuguese",
+    "Intermediate/technical english",
+    "Basic spanish",
   ],
+  schoolTitle: "Education",
   school: {
-    institute: "Universidade Presbiteriana Mackenzie",
-    course: "Bacharelado em Publicidade e Propaganda",
-    date: "Jan/2012 - Dez/2015",
+    institute: "Presbyterian University Mackenzie",
+    course: "Bachelor's degree in Advertising",
+    date: "Jan/2012 - Dec/2015",
   },
   contacts: {
-    phone: "(11) 98877-9888",
+    phone: "+55 (11) 98877-9888",
     email: "eu@henriquekuwai.com.br",
     web: "henriquekuwai.com.br",
     github: "https://github.com/rikezenho",
     codesandbox: "Rikezenho",
-    address: "Saúde, Z/S - São Paulo, SP",
+    address: "Saúde - São Paulo, SP",
     linkedin: "http://br.linkedin.com/in/henriquekuwai",
   },
   personal: {
     logo: "logo.png",
     name: "Henrique Hideki Kuwai",
     shortName: "Henrique Kuwai",
-    subtitle: "Solteiro, brasileiro",
+    subtitle: "Single, brazilian",
     birthDate: "1993-06-20",
   },
+  employeesTitle: "Professional history",
   employees: [
     {
       provider: "Creditas",
@@ -38,8 +41,8 @@ const personalData: PersonalData = {
         {
           position: "Specialist Engineer",
           description:
-            "Lidero a evolução (principalmente na parte de front-end) de um app focado em financiamento automotivo B2B, e também atuo em demandas com outras tecnologias. Atuo tanto na parte do produto mais voltada ao cliente externo, quanto para o cliente interno.",
-          date: "Abr/21 - Atual",
+            "I'm leading the evolution (mainly in front-end) of an app focused in car financing B2B, and I also participate in other activities using technologies like Kotlin with Spring and Ruby on Rails. I work either in the product part focused in external clients, either in the part focused in internal clients.",
+          date: "Apr/21 - Current",
         },
       ],
     },
@@ -48,15 +51,15 @@ const personalData: PersonalData = {
       location: "Vila Olímpia, São Paulo",
       positions: [
         {
-          position: "Arquiteto de software",
+          position: "Software Architect",
           description:
-            "Orientei times e desenvolvedores, reforçando sempre o cuidado em cada etapa da implantação de uma feature, fomentando os debates para definir as soluções técnicas. Pesquisei soluções e criei POCs para provar ideias, e também reforcei boas práticas de código e fluxos de trabalho, disseminando ao máximo o conhecimento em forma de documentações e treinamentos.",
+            "I've oriented teams and developers, always enforcing the ownership in each part of the implementation of a feature; participating and encouraging discussions about technical solutions; searching for solutions and creating proofs of concept to argue my ideas; and always enforcing good practices in coding and workflows. I've also spread all my knowledge about the system with documentations and trainings.",
           date: "Nov/20 - Mar/21",
         },
         {
-          position: "Líder técnico",
+          position: "Tech Leader",
           description:
-            "Fui um dos pilares na construção de uma nova plataforma de e-commerce B2B, arquitetando todo o front-end. Atuei orientando times multidisciplinares, garantindo qualidade de código nas equipes. Ajudei a definir processos internos, criei ferramentas para developer experience e atuei em diversas melhorias, correções e novas tecnologias no core da plataforma.",
+            "I was one of the leaders in a project for building a new e-commerce B2B platform, architecting whole front-end part. I've oriented multidisciplinary teams, always enforcing a good code quality. I've helped to de fine internal processes, created tools for developer experience and did many improvements, fixes and implementations of new technologies in the platform's core.",
           date: "Nov/18 - Nov/20",
         },
       ],
@@ -66,10 +69,10 @@ const personalData: PersonalData = {
       location: "Liberdade, São Paulo",
       positions: [
         {
-          position: "Desenvolvedor front-end",
+          position: "Front-end Developer",
           description:
-            "Participei da criação de novas features para a plataforma e também para o back-office, integrei novas lojas e participei de forma ativa na disseminação de conhecimento técnico.",
-          date: "Abr/18 - Out/18",
+            "I've participated in the development of some new features for the front platform and backoffice system, created new e-commerce stores and also actively participated on spreading technical knowledge with the front-end team.",
+          date: "Apr/18 - Oct/18",
         },
       ],
     },
@@ -78,17 +81,17 @@ const personalData: PersonalData = {
       location: "Vila Olímpia, São Paulo",
       positions: [
         {
-          position: "Líder técnico front-end",
+          position: "Front-end Tech Leader",
           description:
-            "Liderei o desenvolvimento de novas lojas. Atuei coordenando, dando suporte para as equipes e orientando a implantação das lojas desde o escopo, quebra das atividades, até o go live do projeto. Também desenvolvi ferramentas para facilitar o dia a dia da TI da empresa.",
-          date: "Nov/17 - Abr/18",
+            "I led the development of new e-commerce stores. I collaborated coordinating, giving support for the teams and guiding the implementation of new stores since the first scope, followed by the planning of the activities, and finally releasing the project in production. I've also created tools for better developer experience.",
+          date: "Nov/17 - Apr/18",
         },
         {
-          position: "Desenvolvedor front-end",
+          position: "Front-end Developer",
           description:
-            "Atuei como desenvolvedor em diversos e-commerces de médio e grande porte, tanto na implementação de novas features, quanto melhorias e correções de bugs.",
+            "I worked as a developer in many medium and big e-commerces, implementing new features and adding improvements and bugfixes.",
           date: "Jul/16 - Nov/17",
-          awards: ["Prêmio de revelação TI 2016"],
+          awards: ["New Employees Award, 2016"],
         },
       ],
     },
@@ -97,34 +100,35 @@ const personalData: PersonalData = {
       location: "Santo Amaro, São Paulo",
       positions: [
         {
-          position: "Desenvolvedor Fullstack",
+          position: "Fullstack Developer",
           description:
-            "Criei e mantive sites institucionais, portais, hotsites promocionais, todos com CMS próprio. Também criei sites em WordPress e ferramentas para melhorar processos, além de auxiliar a equipe em questões de web e digital.",
+            "Created many institutional webpages, portals, promotional hotsites, always using a CMS in PHP + MySQL created by me, and also created some internal tools to simplify internal processes. Some other activities involved creating sites with WordPress, mentoring and helping my coworkers with digital and web insights, and participated from briefings with external clients.",
           date: "Jan/14 - Mar/16",
         },
       ],
     },
   ],
+  complementaryTitle: "Complementary courses",
   complementary: [
     {
       institute: "Udemy (online)",
-      course: "Desenvolvimento AWS 2020 com foco em Serverless",
-      date: "Abr/2021",
+      course: "AWS 2020 Development, focusing in Serverless",
+      date: "Apr/2021",
     },
     {
       institute: "Udemy (online)",
-      course: "Entendendo TypeScript",
+      course: "Understanding TypeScript",
       date: "Mar/2021",
     },
     {
       institute: "Udemy (online)",
-      course: "Docker: Ferramenta essencial para desenvolvedores",
+      course: "Docker: Essential tool for developers",
       date: "Nov/2018",
     },
     {
       institute: "Udemy (online)",
       course: "React + Redux (by Leonardo Moura Leitão)",
-      date: "Set/2018",
+      date: "Sep/2018",
     },
     {
       institute: "Udemy (online)",
@@ -133,13 +137,13 @@ const personalData: PersonalData = {
     },
     {
       institute: "Alura (online)",
-      course: "Vue.js parte 2: construindo Single Page Applications",
-      date: "Dez/2017",
+      course: "Vue.js part 2: building Single Page Applications",
+      date: "Dec/2017",
     },
   ],
   nodeLists: [
     {
-      title: "Tenho experiência ou já trabalhei com...",
+      title: "I know, and I've worked with...",
       items: [
         "HTML",
         "CSS",
@@ -177,18 +181,18 @@ const personalData: PersonalData = {
         "WordPress",
         "Scrum",
         "Kanban",
-        "Design responsivo",
-        "Design de interfaces",
+        "Responsive design",
+        "Interface design",
         "SEO",
         "Google Analytics",
         "GTM",
       ],
     },
     {
-      title: "Aprendendo...",
+      title: "Learning...",
       items: [
         "GraphQL",
-        "Kotlin com Spring",
+        "Kotlin with Spring",
         "Ruby on Rails",
         "ELK Stack",
         "Elixir",
@@ -198,17 +202,21 @@ const personalData: PersonalData = {
       ],
     },
     {
-      title: "Softwares com aptidão",
+      title: "Softwares",
       items: [
-        "SO Windows",
-        "Linux based SOs",
+        "Windows",
+        "Linux based OSs",
         "VS Code",
         "Adobe Photoshop",
-        "Pacote Office",
+        "Office",
         "Google Docs/Sheets/Presentations",
       ],
     },
   ],
+  linkedInTitle: "See more on my LinkedIn:",
+  sourceCodeTitle: "This resume sourcecode:",
+  lastUpdateTitle: "Last updated on",
+  lastUpdate: "August 22, 2021",
 };
 
 export { personalData };

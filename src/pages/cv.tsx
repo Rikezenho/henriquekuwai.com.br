@@ -34,14 +34,22 @@ const Curriculum: React.FC<ICurriculumProps> = ({
   repositoryUrl,
 }: ICurriculumProps) => {
   const {
-    description,
-    languages,
     personal,
     contacts,
+    aboutTitle,
+    description,
+    languagesTitle,
+    languages,
+    schoolTitle,
     school,
+    employeesTitle,
     employees,
+    complementaryTitle,
     complementary,
     nodeLists,
+    linkedInTitle,
+    sourceCodeTitle,
+    lastUpdateTitle,
     lastUpdate,
   } = personalData;
   return (
@@ -59,22 +67,26 @@ const Curriculum: React.FC<ICurriculumProps> = ({
         <main className="conteudo">
           <div className="content">
             <CvAbout
+              aboutTitle={aboutTitle}
               description={description}
+              languagesTitle={languagesTitle}
               languages={languages}
+              schoolTitle={schoolTitle}
               school={school}
             />
 
             {employees.length ? (
               <section className="history-wrapper has-hr">
-                <h2>Experiência profissional</h2>
-                <CvJobs employees={employees} />
+                <CvJobs employeesTitle={employeesTitle} employees={employees} />
               </section>
             ) : null}
 
             {complementary.length ? (
               <section className="complementary-wrapper has-hr avoid-page-break">
-                <h2>Cursos complementares</h2>
-                <CvCourses courses={complementary} />
+                <CvCourses
+                  complementaryTitle={complementaryTitle}
+                  courses={complementary}
+                />
               </section>
             ) : null}
 
@@ -101,7 +113,7 @@ const Curriculum: React.FC<ICurriculumProps> = ({
           <div className="content">
             {contacts.linkedin ? (
               <div className="additional-info linkedIn-info">
-                <AiFillLinkedin /> Veja mais no meu LinkedIn:{" "}
+                <AiFillLinkedin /> {linkedInTitle}{" "}
                 <a href={contacts.linkedin} target="_blank" rel="noreferrer">
                   {contacts.linkedin}
                 </a>
@@ -109,14 +121,14 @@ const Curriculum: React.FC<ICurriculumProps> = ({
             ) : null}
             {repositoryUrl ? (
               <div className="additional-info github-info">
-                <AiFillGithub /> Código-fonte do currículo:{" "}
+                <AiFillGithub /> {sourceCodeTitle}{" "}
                 <a href={repositoryUrl} target="_blank" rel="noreferrer">
                   {repositoryUrl}
                 </a>
               </div>
             ) : null}
             <br />
-            Última atualização em {lastUpdate}.
+            {lastUpdateTitle} {lastUpdate}.
           </div>
         </footer>
       </CvWrapper>

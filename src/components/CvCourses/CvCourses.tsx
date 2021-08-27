@@ -3,16 +3,23 @@ import { CvCourse } from "./CvCourse/CvCourse";
 import { CoursesWrapper } from "./styles";
 
 interface ICvCoursesProps {
+  complementaryTitle: string;
   courses: Array<Course>;
 }
 
-const CvCourses: React.FC<ICvCoursesProps> = ({ courses }: ICvCoursesProps) => {
+const CvCourses: React.FC<ICvCoursesProps> = ({
+  complementaryTitle,
+  courses,
+}: ICvCoursesProps) => {
   return (
-    <CoursesWrapper>
-      {courses.map((course: Course, index: number) => (
-        <CvCourse key={`course-${index}`} {...course} />
-      ))}
-    </CoursesWrapper>
+    <>
+      <h2>{complementaryTitle}</h2>
+      <CoursesWrapper>
+        {courses.map((course: Course, index: number) => (
+          <CvCourse key={`course-${index}`} {...course} />
+        ))}
+      </CoursesWrapper>
+    </>
   );
 };
 

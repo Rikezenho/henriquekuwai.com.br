@@ -8,19 +8,25 @@ import {
 } from "./styles";
 
 interface ICvAboutProps {
+  aboutTitle: string;
   description: string;
+  languagesTitle: string;
   languages: string[];
+  schoolTitle: string;
   school: Course;
 }
 
 const CvAbout: React.FC<ICvAboutProps> = ({
+  aboutTitle,
   description,
+  languagesTitle,
   languages,
+  schoolTitle,
   school,
 }: ICvAboutProps) => {
   return (
     <AboutSection className="bio-wrapper">
-      <h2>Sobre</h2>
+      <h2>{aboutTitle}</h2>
       <AboutWrapper>
         <AboutDescription
           className="sobre"
@@ -29,7 +35,7 @@ const CvAbout: React.FC<ICvAboutProps> = ({
         <AboutBio>
           {languages.length ? (
             <div className="item">
-              <strong>Idiomas:</strong>
+              <strong>{languagesTitle}</strong>
               <br />
               {languages.map((language: string, index: number) => (
                 <span key={`language-${index}`}>
@@ -42,7 +48,7 @@ const CvAbout: React.FC<ICvAboutProps> = ({
 
           {school ? (
             <div className="item">
-              <strong>Formação acadêmica:</strong>
+              <strong>{schoolTitle}</strong>
               <br />
               <CvCourse {...school} single />
             </div>

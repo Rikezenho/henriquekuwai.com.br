@@ -1,13 +1,21 @@
 export interface PersonalData {
   lastUpdate: string;
+  aboutTitle: string;
   description: string;
+  languagesTitle: string;
   languages: string[];
+  schoolTitle: string;
   school: Course;
   contacts: Contacts;
   personal: Personal;
+  employeesTitle: string;
   employees: Employee[];
+  complementaryTitle: string;
   complementary: Course[];
   nodeLists: NodeList[];
+  linkedInTitle: string;
+  sourceCodeTitle: string;
+  lastUpdateTitle: string;
 }
 
 export interface Contacts {

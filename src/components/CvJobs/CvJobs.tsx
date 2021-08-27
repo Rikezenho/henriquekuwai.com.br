@@ -3,16 +3,27 @@ import { CvJob } from "./CvJob/CvJob";
 import { JobsWrapper } from "./styles";
 
 interface ICvJobsProps {
+  employeesTitle: string;
   employees: Array<Employee>;
 }
 
-const CvJobs: React.FC<ICvJobsProps> = ({ employees }: ICvJobsProps) => {
+const CvJobs: React.FC<ICvJobsProps> = ({
+  employeesTitle,
+  employees,
+}: ICvJobsProps) => {
   return (
-    <JobsWrapper>
-      {employees.map((employee: Employee, index: number) => (
-        <CvJob key={`history-${index}`} {...employee} highlight={index === 0} />
-      ))}
-    </JobsWrapper>
+    <>
+      <h2>{employeesTitle}</h2>
+      <JobsWrapper>
+        {employees.map((employee: Employee, index: number) => (
+          <CvJob
+            key={`history-${index}`}
+            {...employee}
+            highlight={index === 0}
+          />
+        ))}
+      </JobsWrapper>
+    </>
   );
 };
 

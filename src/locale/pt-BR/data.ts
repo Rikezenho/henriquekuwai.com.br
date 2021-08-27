@@ -1,14 +1,16 @@
 import { PersonalData } from "../../types/data";
 
 const personalData: PersonalData = {
-  lastUpdate: "22 de Agosto de 2021",
+  aboutTitle: "Sobre",
   description:
     "Desenvolvedor desde 2008, trabalhei no mercado de e-commerce de 2016 a 2021, e no momento atuo no mercado de financiamentos. Apesar da afinidade com front-end, já atuei com todas as partes de desenvolvimento, back-end a banco de dados. Executei trabalhos dentro de empresas como Creditas, Infracommerce e Netshoes, e atuei em projetos de clientes como Unilever, Mondelez, Ray-Ban, 3M, Montblanc, Globo, Havaianas, Três Corações, Thomson Reuters, Revista dos Tribunais, Instituto GPA, entre outros.",
+  languagesTitle: "Idiomas:",
   languages: [
     "Português nativo",
     "Inglês intermediário/técnico",
     "Espanhol básico",
   ],
+  schoolTitle: "Formação acadêmica",
   school: {
     institute: "Universidade Presbiteriana Mackenzie",
     course: "Bacharelado em Publicidade e Propaganda",
@@ -30,6 +32,7 @@ const personalData: PersonalData = {
     subtitle: "Solteiro, brasileiro",
     birthDate: "1993-06-20",
   },
+  employeesTitle: "Experiência profissional",
   employees: [
     {
       provider: "Creditas",
@@ -105,6 +108,7 @@ const personalData: PersonalData = {
       ],
     },
   ],
+  complementaryTitle: "Cursos complementares",
   complementary: [
     {
       institute: "Udemy (online)",
@@ -209,6 +213,10 @@ const personalData: PersonalData = {
       ],
     },
   ],
+  linkedInTitle: "Veja mais no meu LinkedIn:",
+  sourceCodeTitle: "Código-fonte do currículo:",
+  lastUpdateTitle: "Última atualização em",
+  lastUpdate: "22 de Agosto de 2021",
 };
 
 export { personalData };
