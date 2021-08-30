@@ -6,7 +6,9 @@ import { RiFilePaper2Fill } from "react-icons/ri";
 import logo from "../../../public/logo.png";
 import { PersonalData } from "../../types/data";
 import { IntroductionData } from "../../types/introduction";
+import { Locale } from "../../types/locale";
 import { SocialAnchor } from "../SocialAnchor";
+import { TextIcon } from "../SocialAnchor/styles";
 import { CurrentJob } from "./CurrentJob";
 import {
   IntroductionWrapper,
@@ -18,11 +20,13 @@ import {
 interface IIntroductionProps {
   personalData: PersonalData;
   introduction: IntroductionData;
+  localeToToggle: Locale;
 }
 
 export const Introduction: React.FC<IIntroductionProps> = ({
   personalData,
   introduction,
+  localeToToggle,
 }: IIntroductionProps) => {
   const {
     personal: { shortName },
@@ -43,6 +47,16 @@ export const Introduction: React.FC<IIntroductionProps> = ({
           <CurrentJob employees={employees} introduction={introduction} />
         </IntroductionSubtitle>
         <IntroductionLinks>
+          <Link href="/" passHref locale={localeToToggle.locale}>
+            <SocialAnchor
+              color="#000"
+              styleProps={{ backgroundColor: "#EFEFEF" }}
+              target=""
+              title={localeToToggle.text}
+            >
+              <TextIcon>{localeToToggle.countryCode}</TextIcon>
+            </SocialAnchor>
+          </Link>
           <SocialAnchor
             url={`mailto:${email}`}
             color="#000"

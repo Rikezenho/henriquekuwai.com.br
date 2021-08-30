@@ -13,7 +13,7 @@ const StyledSocialAnchor = styled.a<ISocialAnchorProps>`
   margin-right: 10px;
 
   svg {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   &:hover,
@@ -25,6 +25,22 @@ const StyledSocialAnchor = styled.a<ISocialAnchorProps>`
   &:visited {
     color: ${(props) => props.color};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileL}) {
+    svg {
+      font-size: 20px;
+    }
+  }
 `;
 
-export { StyledSocialAnchor };
+const TextIcon = styled.span`
+  font-size: 24px;
+  line-height: 24px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileL}) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+`;
+
+export { StyledSocialAnchor, TextIcon };

@@ -37,7 +37,7 @@ const IntroductionSubtitle = styled.h2`
   line-height: 1.4;
 
   @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.mobileM}) {
     font-size: 1.4rem;
@@ -46,6 +46,7 @@ const IntroductionSubtitle = styled.h2`
 
 const IntroductionLinks = styled.section`
   padding-top: 15px;
+  display: flex;
 `;
 
 export {

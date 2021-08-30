@@ -1,4 +1,7 @@
 import { GetStaticPropsContext } from "next";
+import { Locale } from "../types/locale";
+import { localeToToggle as ptBrLocale } from "../locale/pt-BR/localeToToggle";
+import { localeToToggle as enUsLocale } from "../locale/en-US/localeToToggle";
 
 const getLocale = async (
   context: GetStaticPropsContext,
@@ -13,4 +16,11 @@ const getLocale = async (
   return imports.reduce((acc, curr) => ({ ...acc, ...curr }), {});
 };
 
-export { getLocale };
+const getLocaleToToggle = (localeCode?: string): Locale => {
+  if (localeCode === ptBrLocale.locale) {
+    return enUsLocale;
+  }
+  return ptBrLocale;
+};
+
+export { getLocale, getLocaleToToggle };
