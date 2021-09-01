@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+            sheet.collectStyles(<App {...props} />), // eslint-disable-line react/display-name
         });
 
       const initialProps = await Document.getInitialProps(ctx);
