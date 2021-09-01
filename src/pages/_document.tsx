@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
+          enhanceApp: (App) => (props) => // eslint-disable-line
             sheet.collectStyles(<App {...props} />),
         });
 
