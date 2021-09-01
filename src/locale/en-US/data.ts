@@ -3,7 +3,7 @@ import { PersonalData } from "../../types/data";
 const personalData: PersonalData = {
   aboutTitle: "About me",
   description:
-    "I'm developing things since 2008. I've worked in e-commerce market from 2016 to 2021, and currently, I'm working at a fintech from financial market. Despite my preference in front-end, I've already worked in every part of software development: from back-end, to databases. I've did jobs in enterprises like Creditas, Infracommerce and Netshoes, and I've participated in big projects for clients like Unilever, Mondelez, Ray-Ban, 3M, Montblanc, GLobo, Havaianas, Thomson Reuters, and some others.",
+    "I'm developing things since 2008. I've worked in e-commerce market from 2016 to 2021, and currently, I'm working at a fintech from financial market. Despite my preference in front-end, I've already worked in every part of software development: from back-end, to databases. I've did jobs in enterprises like Creditas, Infracommerce and Netshoes, and I've participated in big projects for clients like Unilever, Mondelez, Ray-Ban, 3M, Montblanc, Globo, Havaianas, Thomson Reuters, and some others.",
   languagesTitle: "Languages",
   languages: [
     "Native portuguese",
